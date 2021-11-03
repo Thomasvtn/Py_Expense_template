@@ -68,7 +68,8 @@ def new_expense(*args):
 
     infos = prompt(expense_questions)
 
-    writer.writerow([infos['amount'], infos['label'], infos['spender']])
+    writer.writerow([infos['amount'], infos['label'],
+                    infos['spender'], infos['participants']])
 
     print("Expense Added !")
 
