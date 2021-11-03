@@ -22,7 +22,7 @@ expense_questions = [
 
 
 def new_expense(*args):
-    f = open('expense_report.csv', 'a+')
+    f = open('csv/expense_report.csv', 'a+')
     writer = csv.writer(f)
 
     infos = prompt(expense_questions)
