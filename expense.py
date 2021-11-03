@@ -20,6 +20,21 @@ def spender_list(answers):
     return res
 
 
+def participant_list(answers):
+    f = open('csv/users.csv')
+    reader = csv.reader(f)
+    name_list = list(reader)
+
+    f.close()
+
+    res = []
+
+    for row in name_list:
+        res.append({"name": row[0]})
+
+    return res
+
+
 expense_questions = [
     {
         "type": "input",
@@ -36,6 +51,12 @@ expense_questions = [
         "name": "spender",
         "message": "New Expense - Spender: ",
         "choices": spender_list
+    },
+    {
+        "type": "checkbox",
+        "name": "participants",
+        "message": "New Expense - Choose participants",
+        "choices": participant_list
     }
 
 ]
