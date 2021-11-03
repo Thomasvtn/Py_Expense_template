@@ -1,30 +1,34 @@
 from PyInquirer import prompt
+import csv
 
 expense_questions = [
     {
-        "type":"input",
-        "name":"amount",
-        "message":"New Expense - Amount: ",
+        "type": "input",
+        "name": "amount",
+        "message": "New Expense - Amount: ",
     },
     {
-        "type":"input",
-        "name":"label",
-        "message":"New Expense - Label: ",
+        "type": "input",
+        "name": "label",
+        "message": "New Expense - Label: ",
     },
     {
-        "type":"input",
-        "name":"spender",
-        "message":"New Expense - Spender: ",
+        "type": "input",
+        "name": "spender",
+        "message": "New Expense - Spender: ",
     },
 
 ]
 
 
-
 def new_expense(*args):
+    f = open('expense_report.csv', 'a+')
+    writer = csv.writer(f)
+
     infos = prompt(expense_questions)
-    # Writing the informations on external file might be a good idea ¯\_(ツ)_/¯
+    writer.writerow([infos['amount'], infos['label'], infos['spender']])
     print("Expense Added !")
+
+    f.close()
+
     return True
-
-

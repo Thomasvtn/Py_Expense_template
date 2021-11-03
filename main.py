@@ -14,6 +14,7 @@ def ask_option():
     option = prompt(main_option)
     if (option['main_options']) == "New Expense":
         new_expense()
+    else:
         ask_option()
 
 
