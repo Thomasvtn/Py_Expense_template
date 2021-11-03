@@ -17,9 +17,22 @@ def ask_option():
         ask_option()
 
 
+def ask_for_tests():
+    main_option = {
+        "type": "list",
+        "name": "test_options",
+        "message": "Do you want to run the testsuit or the project ?",
+        "choices": ["Testsuit", "Project"]
+    }
+    option = prompt(main_option)
+    if(option['test_options']) == "Testsuit":
+        unittest.main()
+    else:
+        ask_option()
+
+
 def main():
-    ask_option()
-    # unittest.main()
+    ask_for_tests()
 
 
 main()
