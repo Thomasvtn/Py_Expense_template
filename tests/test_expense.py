@@ -9,5 +9,5 @@ class TestExpense(unittest.TestCase):
         self.assertEqual(new_expense('bonjour', 23, 23), False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -10,15 +10,6 @@ user_questions = [
 ]
 
 
-# f = open('csv/expense_report.csv', 'a+')
-#     writer = csv.writer(f)
-
-#     infos = prompt(expense_questions)
-#     writer.writerow([infos['amount'], infos['label'], infos['spender']])
-#     print("Expense Added !")
-
-#     f.close()
-
 def add_user():
     f = open('csv/users.csv', 'a+')
     writer = csv.writer(f)

@@ -30,7 +30,7 @@ def ask_for_tests():
     }
     option = prompt(main_option)
     if(option['test_options']) == "Testsuit":
-        unittest.main()
+        print("It was supposed to work, apparently I failed")
     else:
         ask_option()
 
