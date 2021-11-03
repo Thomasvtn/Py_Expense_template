@@ -1,0 +1,4 @@
+# ignore pycache file
+
+__pycache__
+tests/__pycache__
